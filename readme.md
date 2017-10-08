@@ -1,53 +1,20 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## About Clean-Slate-Laravel
 
-## About Laravel
+Clean-Slate-Laravel is a version of Laravel/Laravel that has been cleaned up and prepared for an ideal greenfield experience when starting a new Laravel project. It includes customizations and suggestions specifically for a dev environment running on a Windows PC (because I'm on a PC, and I built this project starter primarily for my own use). 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Steps for Starting a New Project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Create a project database.
+- Create a local virtual host (if desired) with a custom local url for the project under development.
+- Create a project directory.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+(Note: For Laragon users in Windows, the above steps can be done automatically via Menu->Quick create->Laravel, which will also run a Composer install of Laravel. You will be asked to supply a project name. You will get a MySQL db named "project-name", an Nginx virtual host at http://project-name.dev, and a project directory at C:\laragon\www\project-name.)
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
-
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+- Clone Clean-Slate-Laravel into the project directory. (Use git clone. Note: If Laravel has already been installed, e.g. via a Laragon quick-create, erase everything from the project directory before running git clone.)
+- Update the .env file, changing at minimum APP_NAME (=project-name), APP_URL (=virtual-host-url if a virtual host was created), DB_DATABASE (=name-of-the-database), DB_USERNAME (=probably "root" for dev mode), and DB_PASSWORD (=probably blank for dev mode).
+- Update the timezone config in config/app.php if you don't want to default to Mountain Time zone.
+- Review the "scripts" in the package.json file, which have been modified to deal with a bug on Windows systems. (To change these back to defaults, replace them with the "scripts" from the laravel/laravel Github repo.)
 
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Clean-Slate-Laravel and the Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
