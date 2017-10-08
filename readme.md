@@ -1,7 +1,7 @@
 
 ## About Clean-Slate-Laravel
 
-Clean-Slate-Laravel is a version of Laravel/Laravel that has been cleaned up and prepared for an ideal greenfield experience when starting a new Laravel project. It includes customizations and suggestions specifically for a dev environment running on a Windows PC (because I'm on a PC, and I built this project starter primarily for my own use). 
+Clean-Slate-Laravel is a version of Laravel 5.5 that has been cleaned up and prepared for an ideal greenfield experience when starting a new Laravel project. It includes customizations and suggestions specifically for a dev environment running on a Windows PC (because I'm on a PC, and I built this project starter primarily for my own use). 
 
 ## Steps for Starting a New Project
 
@@ -15,6 +15,7 @@ Clean-Slate-Laravel is a version of Laravel/Laravel that has been cleaned up and
 - Update the .env file, changing at minimum APP_NAME (=project-name), APP_URL (=virtual-host-url if a virtual host was created), DB_DATABASE (=name-of-the-database), DB_USERNAME (=probably "root" for dev mode), and DB_PASSWORD (=probably blank for dev mode).
 - Update the timezone config in config/app.php if you don't want to default to Mountain Time zone.
 - Review the "scripts" in the package.json file, which have been modified to deal with a bug on Windows systems. (To change these back to defaults, replace them with the "scripts" from the laravel/laravel Github repo.)
+- Run "git init" and "php artisan migrate".
 
 ## License
 Clean-Slate-Laravel and the Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
