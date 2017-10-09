@@ -21,7 +21,7 @@ Features:
 - Clone Clean-Slate-Laravel into the project directory:
 `git clone https://github.com/brandallk/clean-slate-laravel.git`
 (Note: If Laravel has already been installed, e.g. via a Laragon quick-create, erase everything from the project directory before running git clone.)
-- Update the .env file, changing at minimum APP_NAME (=project-name), APP_URL (=virtual-host-url if a virtual host was created). If you are not running Homestead, also update DB_DATABASE (=name-of-the-database), DB_USERNAME (=probably "root" for dev mode), and DB_PASSWORD (=probably blank for dev mode).
+- Copy the ".env.example" file and rename it ".env". Run `php artisan key:generate` (see [Laravel docs](https://laravel.com/docs/5.5/encryption#configuration)) to create a new secure APP_KEY. Change at minimum APP_NAME (=project-name) and APP_URL (=virtual-host-url if a virtual host was created). If you are not running Homestead, also update DB_DATABASE (=name-of-the-database), DB_USERNAME (=probably "root" for dev mode), and DB_PASSWORD (=probably blank for dev mode).
 - Update the timezone config in config/app.php if you don't want to default to mountain standard time. (See [http://php.net/manual/en/timezones.php](http://php.net/manual/en/timezones.php).)
 - Review the "scripts" in the package.json file, which have been modified to deal with a persistent issue I've had with aliasing the cross-env.js file. (To change these back to defaults, see the original [repo](https://github.com/laravel/laravel/blob/master/package.json.).)
 - Run `npm install`
