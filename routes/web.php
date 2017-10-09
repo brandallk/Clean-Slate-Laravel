@@ -11,10 +11,10 @@
 |
 */
 
-/*
+/**
  * The following 9 typical authentication routes are a copy of those found in the
  * "auth" method at vendor/laravel/framework/src/illuminate/Routing/Router.php
- * (i.e. the routes registered by the Auth::routes() helper function).
+ * (i.e. the routes registered by the Auth::routes() function).
  */
 
 // User Authentication Routes...
